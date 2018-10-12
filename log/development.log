@@ -1,0 +1,580 @@
+Started GET "/" for 127.0.0.1 at 2018-10-12 13:07:12 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vasyakozar/.rvm/gems/ruby-2.4.0@rails5.1.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vasyakozar/.rvm/gems/ruby-2.4.0@rails5.1.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (2.9ms)
+Completed 200 OK in 116ms (Views: 5.7ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (69.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (78.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20181012100746)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "title" varchar, "body" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181012100746"]]
+  [1m[35m (63.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-10-12 10:08:43.292242"], ["updated_at", "2018-10-12 10:08:43.292242"]]
+  [1m[35m (66.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-10-12 13:08:56 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vasyakozar/.rvm/gems/ruby-2.4.0@rails5.1.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vasyakozar/.rvm/gems/ruby-2.4.0@rails5.1.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (2.7ms)
+Completed 200 OK in 14ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-12 13:10:27 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 460ms (Views: 452.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/routes" for 127.0.0.1 at 2018-10-12 13:12:24 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/routes"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-10-12 13:12:43 +0300
+  
+SyntaxError (/home/vasyakozar/rorlection/blog/app/controllers/posts_controller.rb:10: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/posts_controller.rb:10: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2018-10-12 13:12:55 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 17.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 13:12:57 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 22ms (Views: 20.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 13:12:58 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 20ms (Views: 18.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 13:12:58 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 25ms (Views: 23.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 13:12:59 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 36ms (Views: 33.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 13:18:19 +0300
+  
+SyntaxError (/home/vasyakozar/rorlection/blog/app/controllers/posts_controller.rb:17: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/posts_controller.rb:17: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 13:18:33 +0300
+  
+SyntaxError (/home/vasyakozar/rorlection/blog/app/controllers/posts_controller.rb:17: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/posts_controller.rb:17: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 13:18:36 +0300
+  
+SyntaxError (/home/vasyakozar/rorlection/blog/app/controllers/posts_controller.rb:17: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/posts_controller.rb:17: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 13:18:53 +0300
+  
+SyntaxError (/home/vasyakozar/rorlection/blog/app/controllers/posts_controller.rb:16: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/posts_controller.rb:16: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 13:18:54 +0300
+  
+SyntaxError (/home/vasyakozar/rorlection/blog/app/controllers/posts_controller.rb:16: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/posts_controller.rb:16: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 13:19:24 +0300
+  
+SyntaxError (/home/vasyakozar/rorlection/blog/app/controllers/posts_controller.rb:16: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/posts_controller.rb:16: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 13:19:48 +0300
+  
+SyntaxError (/home/vasyakozar/rorlection/blog/app/controllers/posts_controller.rb:16: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/posts_controller.rb:16: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 13:20:05 +0300
+  
+SyntaxError (/home/vasyakozar/rorlection/blog/app/controllers/posts_controller.rb:15: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/posts_controller.rb:15: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 13:21:23 +0300
+  
+SyntaxError (/home/vasyakozar/rorlection/blog/app/controllers/posts_controller.rb:17: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/posts_controller.rb:17: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 13:22:50 +0300
+  
+SyntaxError (/home/vasyakozar/rorlection/blog/app/controllers/posts_controller.rb:17: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/posts_controller.rb:17: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2018-10-12 13:22:54 +0300
+  
+SyntaxError (/home/vasyakozar/rorlection/blog/app/controllers/posts_controller.rb:17: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/posts_controller.rb:17: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2018-10-12 13:22:57 +0300
+  
+SyntaxError (/home/vasyakozar/rorlection/blog/app/controllers/posts_controller.rb:17: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/posts_controller.rb:17: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2018-10-12 13:24:01 +0300
+  
+SyntaxError (/home/vasyakozar/rorlection/blog/app/controllers/posts_controller.rb:16: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/posts_controller.rb:16: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2018-10-12 13:24:37 +0300
+  
+SyntaxError (/home/vasyakozar/rorlection/blog/app/controllers/posts_controller.rb:16: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/posts_controller.rb:16: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2018-10-12 13:25:13 +0300
+  
+SyntaxError (/home/vasyakozar/rorlection/blog/app/controllers/posts_controller.rb:16: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/posts_controller.rb:16: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2018-10-12 13:25:24 +0300
+  
+SyntaxError (/home/vasyakozar/rorlection/blog/app/controllers/posts_controller.rb:15: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/posts_controller.rb:15: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2018-10-12 13:25:44 +0300
+  
+SyntaxError (/home/vasyakozar/rorlection/blog/app/controllers/posts_controller.rb:16: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/posts_controller.rb:16: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2018-10-12 13:25:46 +0300
+  
+SyntaxError (/home/vasyakozar/rorlection/blog/app/controllers/posts_controller.rb:16: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/posts_controller.rb:16: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2018-10-12 13:25:51 +0300
+  
+SyntaxError (/home/vasyakozar/rorlection/blog/app/controllers/posts_controller.rb:16: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/posts_controller.rb:16: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2018-10-12 13:26:20 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 17ms (Views: 16.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 13:26:22 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 21ms (Views: 20.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 13:26:24 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 21ms (Views: 19.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 13:26:24 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 20ms (Views: 18.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 13:26:25 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 21ms (Views: 19.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 13:26:25 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 19ms (Views: 17.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 13:26:56 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 21ms (Views: 18.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 13:26:58 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 21ms (Views: 19.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 13:26:59 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 23ms (Views: 20.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 13:27:00 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 22ms (Views: 20.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 13:27:00 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 23ms (Views: 20.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 13:27:00 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 21ms (Views: 19.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 13:27:00 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 21ms (Views: 20.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 13:27:00 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 22ms (Views: 20.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 13:27:47 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 19ms (Views: 17.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 13:27:49 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 19ms (Views: 17.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 20:17:29 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 26ms (Views: 24.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 20:17:30 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 25ms (Views: 23.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 20:17:31 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 19ms (Views: 17.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 20:17:32 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 23ms (Views: 21.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 20:17:32 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 22ms (Views: 20.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 20:17:32 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 21ms (Views: 20.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 20:17:39 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 22ms (Views: 20.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 20:17:40 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 20ms (Views: 18.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 20:17:40 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 19ms (Views: 17.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 20:17:40 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 23ms (Views: 21.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 20:17:42 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 19ms (Views: 17.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 20:17:43 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 24ms (Views: 22.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 20:17:45 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 22ms (Views: 20.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 20:17:45 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 20ms (Views: 19.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 20:18:31 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 15ms (Views: 14.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 20:18:33 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 22ms (Views: 20.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 20:18:33 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 22ms (Views: 19.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 20:18:33 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 22ms (Views: 20.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 20:18:34 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 20.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 20:18:34 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 17.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 20:20:32 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 21.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 20:20:33 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 21ms (Views: 19.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 20:20:34 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 23ms (Views: 21.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 20:20:34 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 21ms (Views: 20.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 20:20:35 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 20ms (Views: 17.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 20:20:35 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 20ms (Views: 19.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 20:20:35 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 21ms (Views: 18.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 20:23:53 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (215.0ms)
+Completed 500 Internal Server Error in 218ms
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_posts_path' for #<#<Class:0x007f7db19986e0>:0x007f7db1980f68>
+Did you mean?  new_post_path):
+    1: <h1>Posts#index</h1>
+    2: <p>Find me in app/views/posts/index.html.erb</p>
+    3: <%= link_to "New blog", new_posts_path %>
+  
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb___1040466287027442188_70088913659780'
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 20:24:54 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (217.9ms)
+Completed 500 Internal Server Error in 222ms
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_posts_path' for #<#<Class:0x007f7db19986e0>:0x007f7dac201760>
+Did you mean?  new_post_path):
+    1: <h1>Posts#index</h1>
+    2: <p>Find me in app/views/posts/index.html.erb</p>
+    3: <%= link_to "New blog", new_posts_path %>
+  
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb___1040466287027442188_70088867713140'
+Started GET "/posts" for 127.0.0.1 at 2018-10-12 20:24:57 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (236.3ms)
+Completed 500 Internal Server Error in 240ms
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_posts_path' for #<#<Class:0x007f7db19986e0>:0x007f7dac0b1978>
+Did you mean?  new_post_path):
+    1: <h1>Posts#index</h1>
+    2: <p>Find me in app/views/posts/index.html.erb</p>
+    3: <%= link_to "New blog", new_posts_path %>
+  
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb___1040466287027442188_70088867025280'
+Started GET "/" for 127.0.0.1 at 2018-10-12 20:25:19 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 18ms (Views: 16.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2018-10-12 20:25:21 +0300
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 43ms (Views: 23.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2018-10-12 20:25:34 +0300
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"thdga9iSkIErGdTrPLmLEeVuNDpsTJ0v7Pk2F/18CA2jxXrPRYeiTU5B68AJwVxBofVAd+AnTrOckX1kneDBYQ==", "post"=>{"username"=>"Vasya", "title"=>"123", "body"=>"qwertyuiop"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("username", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "Vasya"], ["title", "123"], ["body", "qwertyuiop"], ["created_at", "2018-10-12 17:25:34.831145"], ["updated_at", "2018-10-12 17:25:34.831145"]]
+  [1m[35m (64.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 69ms (ActiveRecord: 64.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-12 20:25:34 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
